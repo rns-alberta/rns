@@ -1211,6 +1211,7 @@ double   sum_rho=0.0,         /* intermediate sum in eqn for rho */
       rho_equator_h=interp(s_gp,rho_mu_0,SDIV,s_e,&n_nearest);
       rho_center_h=rho[1][1];                      
  
+	  // Cook, Shapiro, Teukolsky 1994, equation A28
       r_e=sqrt(2*h_center/(gama_pole_h+rho_pole_h-gama_center_h-rho_center_h));
 
 
@@ -1252,6 +1253,8 @@ double   sum_rho=0.0,         /* intermediate sum in eqn for rho */
             if(velocity_sq[s][m]>=1.0) 
               velocity_sq[s][m]=0.0;
 
+		 
+		 // Cook, Shapiro, Teukolsky 1994, equation A25
             enthalpy[s][m]=enthalpy_min + 0.5*(SQ(r_e)*(gama_pole_h+rho_pole_h
                            -gama[s][m]-rsm)-log(1.0-velocity_sq[s][m]));
   
