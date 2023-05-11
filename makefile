@@ -57,7 +57,7 @@ SOBJ=rns.o findmodel.o equil.o equil_util.o nrutil.o stableorbit.o surface.o
 #*                    MAIN COMPILING INSTRUCTIONS
 #*************************************************************************/
 rns: $(SOBJ)
-	$(CC) $(MY_OWN) -lm  $(HIGHSIZE) -o rns $(SOBJ)
+	$(CC) $(MY_OWN) $(HIGHSIZE) -o rns $(SOBJ) -lm
 
 maxmass: $(MOBJ)
 	$(CC) $(MY_OWN) -lm  $(HIGHSIZE) -o maxmass $(MOBJ)
