@@ -1,7 +1,11 @@
 /************************************************************************** 
-*                         isco.c                                          *
+*                         rns.c                                           *
 *                                                                         *
-* Computes the ISCO frequencies                                           *
+* Computes the structure of a rapidly rotating neutron star               *
+* Based on code written by Nik Stergioulas                                *
+*                                                                         *
+* Routines to compute the Kepler limit and other useful things can be 
+* found in the file findmodel.c
 *                                                                         *
 **************************************************************************/
 
