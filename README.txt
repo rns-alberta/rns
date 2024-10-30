@@ -1,6 +1,6 @@
 RNS
 
-This code computes the structure of rapidly rotating neutron star. This version computes only one stellar model, but it easily be altered to compute a series of models.
+This code computes the structure of rapidly rotating neutron star. This version computes only one stellar model, but it easily be altered to compute a series of models. Based on code written by Nik Stergioulas.
 
 1. INPUT: Provide the code with an equation of state file, a central energy densities and either a spin frequency or a value of r_ratio.
 
