@@ -195,6 +195,8 @@ int Surface( EOS *eos, NeutronStar *star){
 	*/
   }
 
+// The structure/vector r_surf stores the value of the r (in the Schwarzschild radial coordinate) at each value of theta on the star's surface.
+	
   star->s_surf = s_surf;
   star->r_is_surf = r_is_surf;
   star->r_surf = r_surf;
