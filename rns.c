@@ -147,21 +147,25 @@ int main(int argc, char **argv)     /* Number of command line arguments, Command
 
   //printf("The star infrastructure has been set up! \n");
 
+  // If you want a series of stars with the same EOS but different e_center, you could make a loop here.
+
   e_center = e_min;
 
   printf("e_c \t Mass \t Radius\t Spin  \n");
   printf("e15 \t Msun \t km    \t Hz    \n");
 
   // Compute a spherical star with the correct central energy density
+  // Before you compute a rotating star, you MUST first compute a spherical star with the same central density.
     ierr = MakeSphere(&eos, &star, e_center);
 
     if (r_ratio != 1.0 && spin_freq == 0.0) // r_ratio was set (spin was not)
         ierr = rns( r_ratio,  e_center, &eos, &star);
-    
+
+    // SetSpin() code is in findmodel.c
     if (spin_freq != 0.0) // Spin frequency was set
       ierr = SetSpin(&eos, &star, e_center, spin_freq);
 
-    // Uncomment out the following line if you need to find the surface of the star. 
+    // Uncomment out the following line if you need to find the surface of the star. Code is in surface.c
     //ierr = Surface(&eos,&star);
 
     //orbit(&eos, &star);
