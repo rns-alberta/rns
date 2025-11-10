@@ -161,6 +161,7 @@ int main(int argc, char **argv)     /* Number of command line arguments, Command
     if (spin_freq != 0.0) // Spin frequency was set
       ierr = SetSpin(&eos, &star, e_center, spin_freq);
 
+    // Uncomment out the following line if you need to find the surface of the star. 
     //ierr = Surface(&eos,&star);
 
     //orbit(&eos, &star);
