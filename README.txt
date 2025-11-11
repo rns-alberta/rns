@@ -43,5 +43,7 @@ To compute a star:
 (d) Call SetSpin() to get a star with the desired spin frequency
 (e) Call Surface() to return a collection of vectors defining physical quantities on the star's surface.
 
+7. For more details, read the RNS_Manual.pdf included in this github repository!
+
 
 
