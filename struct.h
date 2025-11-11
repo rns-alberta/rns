@@ -7,14 +7,14 @@ typedef struct{
   char eos_file[80];          /*The name of the EOS file as stored on the computer*/
   char eos_type[10];          /*Tabulated, Polytropic, or Quark*/
   char data_dir[80];          /*The location the output legendre files are sent to*/
-  double log_e_tab[2001];      /*?*/
-  double log_p_tab[2001];      /*?*/
-  double log_h_tab[2001];      /*?*/
-  double log_n0_tab[2001];     /*?*/
-  int n_tab;                  /*?*/
-  double Gamma_P;             /*?*/
-  double B;                   /*?*/
-  double K;                   /*?*/
+  double log_e_tab[2001];      /* log (base 10) of the energy density in cgs units */
+  double log_p_tab[2001];      /* log (base 10) of the pressure in cgs */
+  double log_h_tab[2001];      /* log (base 10 of the enthalpy */
+  double log_n0_tab[2001];     /* log (base 10) of the baryon number density*/
+  int n_tab;                  /* Number of points in the EOS file */
+  double Gamma_P;             /* Polytropic index */
+  double B;                   /* Quark Bag constant (Not really implemented) */
+  double K;                   /* Used in creating some crazy EOSs */
 } EOS;
 
 
